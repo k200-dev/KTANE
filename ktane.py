@@ -67,6 +67,40 @@ def OntheSubjectofWires():
         else:
             print("\n Cut the second wire.")
     # Check if the user wants to run another module
+
+    if numberOfWires == 5:
+        # Get all information needed about the five wires
+        lastBlackWire = input("Is the last wire black? [Y/N] ").lower()
+        serialNumberOdd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
+        numberOfRedWires = int(input("Enter the number of red wires: [0 = None] "))
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        numberOfBlackWires = int(input("Enter the number of black wires: [0 = None] "))
+
+        if lastBlackWire == "y" and serialNumberOdd == "y":
+            print("\n Cut the fourth wire.")
+        elif numberOfRedWires == 1 and numberOfYellowWires > 1:
+            print("\n Cut the first wire.")
+        elif numberOfBlackWires == 0:
+            print("\n Cut the second wire.")
+        else:
+            print("\n Cut the first wire.")
+    
+    if numberOfWires == 6:
+        # Get all information needed about the six wires
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        serialNumberOdd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        numberOfWhiteWires = int(input("Enter the number of white wires: [0 = None] "))
+        numberOfRedWires = int(input("Enter the number of red wires: [0 = None] "))
+
+        if numberOfYellowWires == 0 and serialNumberOdd == "y":
+            print("\n Cut the third wire.")
+        elif numberOfYellowWires == 1 and numberOfWhiteWires > 1:
+            print("\n Cut the fourth wire.")
+        elif numberOfRedWires == 0:
+            print("\n Cut the last wire.")
+        else:
+            print("\n Cut the fourth wire.")
     continueProgram()
 
 def OntheSubjectofTheButton():

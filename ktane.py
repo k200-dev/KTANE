@@ -103,12 +103,115 @@ def OntheSubjectofWires():
             print("\n Cut the fourth wire.")
     continueProgram()
 
-def OntheSubjectofTheButton():
-    tprint("Button.")
-    print("[-] This module is a work in progress")
-    # Check if the user wants to run another module
-    continueProgram()
 
+
+def OntheSubjectofTheButton():
+
+    # Helper function for onTheSubjectOfButtons
+    def buttonLitStrip():
+        print("Hold the button down and observe the lit coloured strip on the right of the button")
+        litStrip = input("Enter the colour of the strip: ").lower()
+        if litStrip == "blue":
+            print("Release the button when the countdown timer has a 4 in any position")
+        elif litStrip == "white":
+            print("Release the button when the countdown timer has a 1 in any position")
+        elif litStrip == "yellow":
+            print("Release the button when the countdown timer has a 5 in any position")
+        else:
+            print("Release the button when the countdown timer has a 1 in any position")    
+
+
+    # Use art module to print ascii text of button
+    tprint("Button")
+
+
+    # Gathering inputs to act on in the main process
+    buttonColour = input("Enter the colour of the button: ").lower()
+    buttonHasText = input("Does the button have text on it? [Y/N]: ").lower()
+    if buttonHasText == "y":
+        buttonText = input("Enter the text on the button: ").lower()
+    bombHasBatteries = input("Does the bomb have batteries on it? [Y/N]: ").lower()
+    if bombHasBatteries == "y":
+        batteryNo = int(input("Enter the number of batteries on the bomb: "))
+
+
+    # Code to run if the button is blue
+    if buttonColour == "blue":
+        # Code to run if the button is blue and says "abort"
+        if buttonText == "abort" and buttonColour == "blue":
+            buttonLitStrip()
+        # Code block to deal with batteries on the bomb
+        elif batteryNo > 1 and buttonText == "detonate":
+            print("Press and immediately release the button")
+            return
+        elif batteryNo > 2:
+            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            if litIndicator == "y":
+                print("Press and immediately release the button")
+                return
+          
+
+    # Code to run if the button is white
+    if buttonColour == "white":
+        litIndicator = input("Is there a lit indicator with label CAR? [Y/N]: ").lower()
+        if litIndicator == "y":
+            litStrip()
+        # Code block to deal with batteries on the bomb
+        elif batteryNo > 1 and buttonText == "detonate":
+            print("Press and immediately release the button")
+            return
+        elif batteryNo > 2:
+            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            if litIndicator == "y":
+                print("Press and immediately release the button")
+                return
+
+
+    # Code to run if the button is yellow
+    if buttonColour == "yellow":
+        buttonLitStrip()
+        # Code block to deal with batteries on the bomb
+        if batteryNo > 1 and buttonText == "detonate":
+            print("Press and immediately release the button")
+            return
+        elif batteryNo > 2:
+            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            if litIndicator == "y":
+                print("Press and immediately release the button")
+                return
+
+
+    # Code to run if the button is red and has the text "hold"
+    if buttonColour == "red" and buttonText == "hold":
+        print("Press and immediately release the button")
+
+
+    # Code to run if the button is only red
+    elif buttonColour == "red":
+        # Code block to deal with batteries on the bomb
+        if batteryNo > 1 and buttonText == "detonate":
+            print("Press and immediately release the button")
+            return
+        elif batteryNo > 2:
+            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            if litIndicator == "y":
+                print("Press and immediately release the button")
+                return
+
+    # Catch all statement for batteries
+    if buttonColour == "blue" or buttonColour == "white" or buttonColour == "yellow" or buttonColour == "red":
+        if batteryNo > 1 and buttonText == "detonate":
+            print("Press and immediately release the button")
+            return
+        elif batteryNo > 2:
+            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ").lower()
+            if litIndicator == "y":
+                buttonLitStrip()
+                return
+
+
+    # Run the continue program function to check if they want to do another module
+    continueProgram()
 
 # Checks that the user still wants to do more modules
 while carryOn == True:

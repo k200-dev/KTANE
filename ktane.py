@@ -48,6 +48,24 @@ def OntheSubjectofWires():
         else:
             print("\n Cut the last wire.")
 
+    elif numberOfWires == 4:
+        # Get all information needed about the four wires
+        numberOfRedWires = int(input("Enter the number of red wires: [0 = None] "))
+        numberOfBlueWires = int(input("Enter the number of blue wires: [0 = None] "))
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        serialNumberOdd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
+        lastYellowWire = input("Is the last wire yellow? [Y/N] ").lower()
+
+        if numberOfRedWires > 1 and serialNumberOdd == "y":
+            print("\n Cut the last red wire.")
+        elif lastYellowWire == "y" and numberOfRedWires == 0:
+            print("\n Cut the first wire")
+        elif numberOfBlueWires == 1:
+            print("\n Cut the first wire.")
+        elif numberOfYellowWires > 1:
+            print("\n Cut the last wire.")
+        else:
+            print("\n Cut the second wire.")
     # Check if the user wants to run another module
     continueProgram()
 

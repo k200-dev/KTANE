@@ -52,7 +52,7 @@ def OntheSubjectofWires():
         # Get all information needed about the four wires
         numberOfRedWires = int(input("Enter the number of red wires: [0 = None] "))
         numberOfBlueWires = int(input("Enter the number of blue wires: [0 = None] "))
-        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None] "))
         serialNumberOdd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
         lastYellowWire = input("Is the last wire yellow? [Y/N] ").lower()
 
@@ -73,7 +73,7 @@ def OntheSubjectofWires():
         lastBlackWire = input("Is the last wire black? [Y/N] ").lower()
         serialNumberOdd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
         numberOfRedWires = int(input("Enter the number of red wires: [0 = None] "))
-        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None] "))
         numberOfBlackWires = int(input("Enter the number of black wires: [0 = None] "))
 
         if lastBlackWire == "y" and serialNumberOdd == "y":
@@ -87,9 +87,9 @@ def OntheSubjectofWires():
     
     if numberOfWires == 6:
         # Get all information needed about the six wires
-        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None] "))
         serialNumberOdd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
-        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None]"))
+        numberOfYellowWires = int(input("Enter the number of yellow wires: [0 = None] "))
         numberOfWhiteWires = int(input("Enter the number of white wires: [0 = None] "))
         numberOfRedWires = int(input("Enter the number of red wires: [0 = None] "))
 

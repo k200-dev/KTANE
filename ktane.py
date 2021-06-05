@@ -150,12 +150,12 @@ def OntheSubjectofTheButton():
             buttonLitStrip()
         # Code block to deal with batteries on the bomb
         elif batteryNo > 1 and buttonText == "detonate":
-            print("Press and immediately release the button")
+            print("\n Press and immediately release the button")
             return
         elif batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
             if litIndicator == "y":
-                print("Press and immediately release the button")
+                print("\n Press and immediately release the button")
                 return
           
 
@@ -168,14 +168,14 @@ def OntheSubjectofTheButton():
             litStrip()
         # Code block to deal with batteries on the bomb
         elif batteryNo > 1 and buttonText == "detonate":
-            print("Press and immediately release the button")
+            print("\n Press and immediately release the button")
             return
         elif batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
             while litIndicator != "y" and litIndicator != "n":
                 litIndicator = input("Invalid input, Is there a lit indicator with label FRK? [Y/N]: ").lower()
             if litIndicator == "y":
-                print("Press and immediately release the button")
+                print("\n Press and immediately release the button")
                 return
         else:
             buttonLitStrip()
@@ -187,14 +187,14 @@ def OntheSubjectofTheButton():
         buttonLitStrip()
         # Code block to deal with batteries on the bomb
         if batteryNo > 1 and buttonText == "detonate":
-            print("Press and immediately release the button")
+            print("\n Press and immediately release the button")
             return
         elif batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
             while litIndicator != "y" and litIndicator != "n":
                 litIndicator = input("Invalid input, Is there a lit indicator with label FRK? [Y/N]: ").lower()
             if litIndicator == "y":
-                print("Press and immediately release the button")
+                print("\n Press and immediately release the button")
                 return
         else:
             buttonLitStrip()
@@ -203,21 +203,21 @@ def OntheSubjectofTheButton():
 
     # Code to run if the button is red and has the text "hold"
     if buttonColour == "red" and buttonText == "hold":
-        print("Press and immediately release the button")
+        print("\n Press and immediately release the button")
 
 
     # Code to run if the button is only red
     elif buttonColour == "red":
         # Code block to deal with batteries on the bomb
         if batteryNo > 1 and buttonText == "detonate":
-            print("Press and immediately release the button")
+            print("\n Press and immediately release the button")
             return
         elif batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
             while litIndicator != "y" and litIndicator != "n":
                 litIndicator = input("Invalid input, Is there a lit indicator with label FRK? [Y/N]: ").lower()
             if litIndicator == "y":
-                print("Press and immediately release the button")
+                print("\n Press and immediately release the button")
                 return
         else:
             buttonLitStrip()
@@ -225,6 +225,7 @@ def OntheSubjectofTheButton():
 
     # Catch all statement for batteries
     if buttonColour == "blue" or buttonColour == "white" or buttonColour == "yellow" or buttonColour == "red":
+      main
         if bombHasBatteries == "y" and batteryNo > 1 and buttonText == "detonate":
             print("Press and immediately release the button")
             return

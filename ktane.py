@@ -228,7 +228,6 @@ def OntheSubjectofTheButton():
 
     # Catch all statement for batteries
     if buttonColour == "blue" or buttonColour == "white" or buttonColour == "yellow" or buttonColour == "red":
-      main
         if bombHasBatteries == "y" and batteryNo > 1 and buttonText == "detonate":
             print("Press and immediately release the button")
             return

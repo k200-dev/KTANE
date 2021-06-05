@@ -157,6 +157,9 @@ def OntheSubjectofTheButton():
             if litIndicator == "y":
                 print("\n Press and immediately release the button")
                 return
+        else:
+            buttonLitStrip()
+            return
           
 
     # Code to run if the button is white

@@ -127,10 +127,18 @@ def OntheSubjectofTheButton():
 
     # Gathering inputs to act on in the main process
     buttonColour = input("Enter the colour of the button: ").lower()
+    while buttonColour != "blue" and buttonColour != "red" and buttonColour != "white" and buttonColour != "yellow" and buttonColour != "black":
+            buttonColour = input("Invalid input, Enter the colour of the button: ").lower()
     buttonHasText = input("Does the button have text on it? [Y/N]: ").lower()
+    while buttonHasText != "y" and buttonHasText != "n":
+        buttonHasText = input("Invalid input, Does the button have text on it? [Y/N]: ").lower()
     if buttonHasText == "y":
         buttonText = input("Enter the text on the button: ").lower()
+        while buttonText != "abort" and buttonText != "detonate" and buttonText != "hold" and buttonText != "press":
+            buttonText = input("Invalid input, Enter the text on the button: ").lower()
     bombHasBatteries = input("Does the bomb have batteries on it? [Y/N]: ").lower()
+    while bombHasBatteries != "y" and bombHasBatteries != "n":
+        bombHasBatteries = input("Invalid input, Does the button have text on it? [Y/N]: ").lower()
     if bombHasBatteries == "y":
         batteryNo = int(input("Enter the number of batteries on the bomb: "))
 
@@ -154,6 +162,8 @@ def OntheSubjectofTheButton():
     # Code to run if the button is white
     if buttonColour == "white":
         litIndicator = input("Is there a lit indicator with label CAR? [Y/N]: ").lower()
+        while litIndicator != "y" and litIndicator != "n":
+            litIndicator = input("Invalid input, Is there a lit indicator with label CAR? [Y/N]: ").lower()
         if litIndicator == "y":
             litStrip()
         # Code block to deal with batteries on the bomb
@@ -162,9 +172,14 @@ def OntheSubjectofTheButton():
             return
         elif batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            while litIndicator != "y" and litIndicator != "n":
+                litIndicator = input("Invalid input, Is there a lit indicator with label FRK? [Y/N]: ").lower()
             if litIndicator == "y":
                 print("Press and immediately release the button")
                 return
+        else:
+            buttonLitStrip()
+            return
 
 
     # Code to run if the button is yellow
@@ -176,9 +191,14 @@ def OntheSubjectofTheButton():
             return
         elif batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            while litIndicator != "y" and litIndicator != "n":
+                litIndicator = input("Invalid input, Is there a lit indicator with label FRK? [Y/N]: ").lower()
             if litIndicator == "y":
                 print("Press and immediately release the button")
                 return
+        else:
+            buttonLitStrip()
+            return
 
 
     # Code to run if the button is red and has the text "hold"
@@ -194,20 +214,30 @@ def OntheSubjectofTheButton():
             return
         elif batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            while litIndicator != "y" and litIndicator != "n":
+                litIndicator = input("Invalid input, Is there a lit indicator with label FRK? [Y/N]: ").lower()
             if litIndicator == "y":
                 print("Press and immediately release the button")
                 return
+        else:
+            buttonLitStrip()
+            return
 
     # Catch all statement for batteries
     if buttonColour == "blue" or buttonColour == "white" or buttonColour == "yellow" or buttonColour == "red":
-        if batteryNo > 1 and buttonText == "detonate":
+        if bombHasBatteries == "y" and batteryNo > 1 and buttonText == "detonate":
             print("Press and immediately release the button")
             return
-        elif batteryNo > 2:
+        elif bombHasBatteries == "y" and batteryNo > 2:
             litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ").lower()
+            while litIndicator != "y" and litIndicator != "n":
+                litIndicator = input("Invalid input, Is there a lit indicator with label FRK? [Y/N]: ").lower()
             if litIndicator == "y":
                 buttonLitStrip()
                 return
+        else:
+            buttonLitStrip()
+            return
 
 
     # Run the continue program function to check if they want to do another module

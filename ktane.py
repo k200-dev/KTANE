@@ -241,18 +241,89 @@ def OntheSubjectofTheButton():
     continueProgram()
 
 def OntheSubjectofSimonSays():
-    #[WIP]
-    # # Use art module to print ascii text of simon says
+    # Use art module to print ascii text of simon says
     tprint("Simon Says")
 
+    # Getting inputs from user and defining variables
     flashList = []
     inputList = []
     snHasVowel = input("Does the serial number contain a vowel? [Y/N]: ").lower()
     strikeNo = int(input("Enter the number of strikes [0, 1, 2]: "))
+    # Input validation for strikes
     while strikeNo > 2 or strikeNo < 0:
         strikeNo = int(input("Invalid input, Enter the number of strikes [0, 1, 2]: "))
 
+    # If the serial number has a vowel
     if snHasVowel == "y":
+        # If there are no strikes
+        if strikeNo == 0:
+            # Repeat four times for number of colour repititions
+            for i in range(4):
+                if i > 0:
+                    flash = input("What colour on the module is flashing next?: ").lower()
+                else:
+                    flash = input("What colour on the module is flashing: ").lower()
+                while flash != "red" and flash != "blue" and flash != "green" and flash != "yellow":
+                    if i > 0:
+                        flash = input("Invalid input, What colour on the module is flashing next?: ").lower()
+                    else:
+                        flash = input("Invalid input, What colour on the module is flashing: ").lower()
+                flashList.append(flash)
+                if flash == "red":
+                    inputList.append("Blue")
+                elif flash == "blue":
+                    inputList.append("Red")
+                elif flash == "green":
+                    inputList.append("Yellow")
+                elif flash == "yellow":
+                    inputList.append("Green")
+                print("Press the colours in this order:", *inputList, sep=" ")
+
+        elif strikeNo == 1:
+            for i in range(4):
+                if i > 0:
+                    flash = input("What colour on the module is flashing next?: ").lower()
+                else:
+                    flash = input("What colour on the module is flashing: ").lower()
+                while flash != "red" and flash != "blue" and flash != "green" and flash != "yellow":
+                    if i > 0:
+                        flash = input("Invalid input, What colour on the module is flashing next?: ").lower()
+                    else:
+                        flash = input("Invalid input, What colour on the module is flashing: ").lower()
+                flashList.append(flash)
+                if flash == "red":
+                    inputList.append("Yellow")
+                elif flash == "blue":
+                    inputList.append("Green")
+                elif flash == "green":
+                    inputList.append("Blue")
+                elif flash == "yellow":
+                    inputList.append("Red")
+                print("Press the colours in this order:", *inputList, sep=" ")
+
+        elif strikeNo == 2:
+            for i in range(4):
+                if i > 0:
+                    flash = input("What colour on the module is flashing next?: ").lower()
+                else:
+                    flash = input("What colour on the module is flashing: ").lower()
+                while flash != "red" and flash != "blue" and flash != "green" and flash != "yellow":
+                    if i > 0:
+                        flash = input("Invalid input, What colour on the module is flashing next?: ").lower()
+                    else:
+                        flash = input("Invalid input, What colour on the module is flashing: ").lower()
+                flashList.append(flash)
+                if flash == "red":
+                    inputList.append("Green")
+                elif flash == "blue":
+                    inputList.append("Red")
+                elif flash == "green":
+                    inputList.append("Yellow")
+                elif flash == "yellow":
+                    inputList.append("Blue")
+                print("Press the colours in this order:", *inputList, sep=" ")
+                    
+    elif snHasVowel == "n":
         if strikeNo == 0:
             for i in range(4):
                 if i > 0:
@@ -266,17 +337,58 @@ def OntheSubjectofSimonSays():
                         flash = input("Invalid input, What colour on the module is flashing: ").lower()
                 flashList.append(flash)
                 if flash == "red":
-                    inputList.append("blue")
+                    inputList.append("Blue")
                 elif flash == "blue":
-                    inputList.append("red")
+                    inputList.append("Yellow")
                 elif flash == "green":
-                    inputList.append("yellow")
+                    inputList.append("Green")
                 elif flash == "yellow":
-                    inputList.append("green")
-                for i in inputList:
-                    inputList[i] = inputList[i].capitalize()
+                    inputList.append("Red")
                 print("Press the colours in this order:", *inputList, sep=" ")
-                    
+
+        elif strikeNo == 1:
+            for i in range(4):
+                if i > 0:
+                    flash = input("What colour on the module is flashing next?: ").lower()
+                else:
+                    flash = input("What colour on the module is flashing: ").lower()
+                while flash != "red" and flash != "blue" and flash != "green" and flash != "yellow":
+                    if i > 0:
+                        flash = input("Invalid input, What colour on the module is flashing next?: ").lower()
+                    else:
+                        flash = input("Invalid input, What colour on the module is flashing: ").lower()
+                flashList.append(flash)
+                if flash == "red":
+                    inputList.append("Red")
+                elif flash == "blue":
+                    inputList.append("Blue")
+                elif flash == "green":
+                    inputList.append("Yellow")
+                elif flash == "yellow":
+                    inputList.append("Green")
+                print("Press the colours in this order:", *inputList, sep=" ")
+
+        elif strikeNo == 2:
+            for i in range(4):
+                if i > 0:
+                    flash = input("What colour on the module is flashing next?: ").lower()
+                else:
+                    flash = input("What colour on the module is flashing: ").lower()
+                while flash != "red" and flash != "blue" and flash != "green" and flash != "yellow":
+                    if i > 0:
+                        flash = input("Invalid input, What colour on the module is flashing next?: ").lower()
+                    else:
+                        flash = input("Invalid input, What colour on the module is flashing: ").lower()
+                flashList.append(flash)
+                if flash == "red":
+                    inputList.append("Yellow")
+                elif flash == "blue":
+                    inputList.append("Green")
+                elif flash == "green":
+                    inputList.append("Blue")
+                elif flash == "yellow":
+                    inputList.append("Red")
+                print("Press the colours in this order:", *inputList, sep=" ")
 
 
 

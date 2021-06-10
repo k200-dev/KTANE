@@ -7,7 +7,7 @@ tprint("KTANE")
 time.sleep(1)
 
 # Define all the needed variables
-moduleArrays = ["Wires", "Button", "Simon Says", "Who's First"]
+moduleArrays = ["Wires", "Button", "Simon Says", "Memory"]
 total = 1
 carryOn = True
 positiveTotal = 0
@@ -395,15 +395,58 @@ def OntheSubjectofSimonSays():
     # Run the continue program function to check if they want to do another module
     continueProgram()
 
-def OntheSubjectofWhosFirst():
-    tprint("Who's First")
+def OntheSubjectofMemory():
+    # Use art module to print ascii text of "Memory"
+    tprint("Memory")
+    
+    ## STAGE 1 ##
+    stage1DisplayNo = int(input("Enter the number on the display: "))
+    while stage1DisplayNo < 1 or stage1DisplayNo > 4:
+        stage1DisplayNo = int(input("Invalid input, Enter the number on the display [1, 2, 3, 4]: "))
 
-    step1displayText = input("What is the word on the modules display, if no text appears press enter: ").lower()
-    if step1displayText == "yes":
-        step2buttonLabel = input("What is the text on the button at the Middle Left: ")
-        if step2buttonLabel:
-            pass
+    if stage1DisplayNo == 1 or stage1DisplayNo == 2:
+        print("Press the button in the second position. ")
+        stage1label = int(input("Enter the label on the button you just pressed: "))
+        stage1Pos = 2
+    elif stage1DisplayNo == 3:
+        print("Press the button in the third position. ")
+        stage1label = int(input("Enter the label on the button you just pressed: "))
+        stage1Pos = 3
+    elif stage1DisplayNo == 4:
+        print("Press the button in the fourth position. ")
+        stage1label = int(input("Enter the label on the button you just pressed: "))
+        stage1Pos = 4
+    
+    ## STAGE 2 ##
+    stage2DisplayNo = int(input("Enter the number on the display: "))
+    while stage2DisplayNo < 1 or stage2DisplayNo > 4:
+        stage2DisplayNo = int(input("Invalid input, Enter the number on the display [1, 2, 3, 4]: "))
+    
+    if stage2DisplayNo == 1:
+        print("Press the button labeled 4. ")
+        stage2Pos = int(input("Enter the position of the button you just pressed: "))
+        stage2label = 4
+    elif stage2DisplayNo == 2 or stage2DisplayNo == 4:
+        print(f"Press the button in position {stage1Pos}. ")
+        stage2label = int(input("Enter the label on the button you just pressed: "))
+        stage2Pos = stage1Pos
+    elif stage2DisplayNo == 3:
+        print("Press the button in position 1. ")
+        stage2label = int(input("Enter the label on the button you just pressed: "))
+        stage2Pos = 1
 
+    ## STAGE 3 ##
+    stage3DisplayNo = int(input("Enter the number on the display: "))
+    while stage3DisplayNo < 1 or stage3DisplayNo > 4:
+        stage3DisplayNo = int(input("Invalid input, Enter the number on the display [1, 2, 3, 4]: "))
+    
+    if stage3DisplayNo == 1:
+        print(f"Press the button labeled {stage2label}. ")
+        stage2Pos = int(input("Enter the position of the button you just pressed: "))
+    elif stage3DisplayNo == 2:
+        print(f"Press the button labeled {stage1label}")
+    elif stage3DisplayNo == 3
+    # MAKE SURE TO COME BACK TO HERE AND SET LABELS AND SHIT
 
 # Checks that the user still wants to do more modules
 while carryOn == True:
@@ -432,4 +475,4 @@ while carryOn == True:
     elif moduleInput == 3:
         OntheSubjectofSimonSays()
     elif moduleInput == 4:
-        OntheSubjectofWhosFirst()
+        OntheSubjectofMemory()

@@ -7,7 +7,7 @@ tprint("KTANE")
 time.sleep(1)
 
 # Define all the needed variables
-moduleArrays = ["Wires", "Button", "Simon Says"]
+moduleArrays = ["Wires", "Button", "Simon Says", "Who's First"]
 total = 1
 carryOn = True
 positiveTotal = 0
@@ -102,8 +102,6 @@ def OntheSubjectofWires():
         else:
             print("\n Cut the fourth wire.")
     continueProgram()
-
-
 
 def OntheSubjectofTheButton():
 
@@ -285,6 +283,16 @@ def OntheSubjectofSimonSays():
     # Run the continue program function to check if they want to do another module
     continueProgram()
 
+def OntheSubjectofWhosFirst():
+    tprint("Who's First")
+
+    step1displayText = input("What is the word on the modules display, if no text appears press enter: ").lower()
+    if step1displayText == "yes":
+        step2buttonLabel = input("What is the text on the button at the Middle Left: ")
+        if step2buttonLabel:
+            pass
+
+
 # Checks that the user still wants to do more modules
 while carryOn == True:
     # Print the first list item
@@ -311,3 +319,5 @@ while carryOn == True:
         OntheSubjectofTheButton()
     elif moduleInput == 3:
         OntheSubjectofSimonSays()
+    elif moduleInput == 4:
+        OntheSubjectofWhosFirst()

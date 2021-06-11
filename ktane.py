@@ -442,11 +442,48 @@ def OntheSubjectofMemory():
     
     if stage3DisplayNo == 1:
         print(f"Press the button labeled {stage2label}. ")
-        stage2Pos = int(input("Enter the position of the button you just pressed: "))
+        stage3label = stage2label
     elif stage3DisplayNo == 2:
         print(f"Press the button labeled {stage1label}")
-    elif stage3DisplayNo == 3
-    # MAKE SURE TO COME BACK TO HERE AND SET LABELS AND SHIT
+        stage3label = stage1label
+    elif stage3DisplayNo == 3:
+        print("Press the button in the third position")
+        stage3label = int(input("Enter the label on the button you just pressed: "))
+    elif stage3DisplayNo == 4:
+        print("Press the button labeled 4. ")
+        stage3label = 4
+
+    ## STAGE 4 ##
+    stage4DisplayNo = int(input("Enter the number on the display: "))
+    while stage4DisplayNo < 1 or stage4DisplayNo > 4:
+        stage4DisplayNo = int(input("Invalid input, Enter the number on the display [1, 2, 3, 4]: "))
+    
+    if stage4DisplayNo == 1:
+        print(f"Press the button in position {stage1Pos}. ")
+        stage4label = int(input("Enter the label on the button you just pressed: "))
+    elif stage4DisplayNo == 2:
+        print("Press the button in position 1. ")
+        stage4label = int(input("Enter the label on the button you just pressed: "))
+    elif stage4DisplayNo == 3 or stage4DisplayNo == 4:
+        print(f"Press the button in position {stage2Pos}. ")
+        stage4label = int(input("Enter the label on the button you just pressed: "))
+
+    ## STAGE 5 ##
+    stage5DisplayNo = int(input("Enter the number on the display: "))
+    while stage5DisplayNo < 1 or stage5DisplayNo > 4:
+        stage5DisplayNo = int(input("Invalid input, Enter the number on the display [1, 2, 3, 4]: "))
+    
+    if stage5DisplayNo == 1:
+        print(f"Press the button labeled {stage1label}. ")
+    elif stage5DisplayNo == 2:
+        print(f"Press the button labeles {stage2label}")
+    elif stage5DisplayNo == 3:
+        print(f"Press the button labeles {stage4label}")
+    elif stage5DisplayNo == 4:
+        print(f"Press the button labeled {stage3label}")
+
+    continueProgram()
+
 
 # Checks that the user still wants to do more modules
 while carryOn == True:

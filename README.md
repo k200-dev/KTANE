@@ -1,18 +1,36 @@
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-# KTANE
+[![Stargazers][stars-shield]][stars-url]
+
+## About
+
 A program that does the job of the manual reader in the videogame Keep Talking and Nobody Explodes.
+
+### Built With
+
+* [Python 3](https://www.python.org/)
+* [Colorama](https://github.com/tartley/colorama)
+* [Art](https://github.com/sepandhaghighi/art)
+
+### Prerequisites
+
+* colorama
+  ```sh
+  pip install colorama
+  ```
+* art
+  ```sh
+  pip install art
+  ```
+
+### Setup
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/k200-dev/KTANE/
+   ```
 
 ## Usage
 
-Clone the repo or download the latest release, then run the ktane.exe program for windows
-If you don't want to run the exe use the below instructions to run it directly from Python
+Run the executable or run `ktane.py` with python
 
-## Usage (running from python)
-
-Run the commands to install the imports and then run the program.
-```
-pip install -r requirements.txt
-python ktane.py
-```
+[stars-shield]: https://img.shields.io/github/stars/k200-dev/KTANE.svg?style=for-the-badge
+[stars-url]: https://github.com/k200-dev/KTANE/stargazers

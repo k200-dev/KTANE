@@ -23,10 +23,12 @@ A program that does the job of the manual reader in the videogame Keep Talking a
 
 ### Setup
 
-1. Clone the repo
+1 (Python). Clone the repo
    ```sh
    git clone https://github.com/k200-dev/KTANE/
    ```
+
+1 (Executable). Download the most up to date executable from the [releases](https://github.com/k200-dev/KTANE/releases/) tab
 
 ## Usage
 

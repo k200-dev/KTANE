@@ -3,12 +3,10 @@ from colorama import Fore, Style
 
 
 def OntheSubjectofSimonSays():
-    # Use art module to print ascii text of simon says
     print(Fore.BLUE)
     tprint("Simon Says")
     print(Style.RESET_ALL)
 
-    # Getting inputs from user and defining variables
     flashList = []
     inputList = []
     snHasVowel = input("Does the serial number contain a vowel? [Y/N]: ").lower()
@@ -17,11 +15,8 @@ def OntheSubjectofSimonSays():
     while strikeNo > 2 or strikeNo < 0:
         strikeNo = int(input("Invalid input, Enter the number of strikes [0, 1, 2]: "))
 
-    # If the serial number has a vowel
     if snHasVowel == "y":
-        # If there are no strikes
         if strikeNo == 0:
-            # Repeat four times for number of colour repititions
             for i in range(4):
                 if i > 0:
                     flash = input(

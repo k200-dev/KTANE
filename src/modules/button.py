@@ -35,7 +35,6 @@ def OntheSubjectofTheButton():
             )
             print(Style.RESET_ALL)
 
-    # Use art module to print ascii text of button
     print(Fore.BLUE)
     tprint("Button")
     print(Style.RESET_ALL)
@@ -46,7 +45,6 @@ def OntheSubjectofTheButton():
     bombHasBatteries = ""
     batteryNo = 0
 
-    # Gathering inputs to act on in the main process
     buttonColour = input("Enter the colour of the button: ").lower()
     while (
         buttonColour != "blue"
@@ -80,13 +78,10 @@ def OntheSubjectofTheButton():
     if bombHasBatteries == "y":
         batteryNo = int(input("Enter the number of batteries on the bomb: "))
 
-    # Code to run if the button is blue
     if buttonColour == "blue":
-        # Code to run if the button is blue and says "abort"
         if buttonText == "abort" and buttonColour == "blue":
             buttonLitStrip()
             return
-        # Code block to deal with batteries on the bomb
         elif batteryNo > 1 and buttonText == "detonate":
             print(Fore.CYAN)
             print("\n Press and immediately release the button")
@@ -104,7 +99,6 @@ def OntheSubjectofTheButton():
         buttonLitStrip()
         return
 
-    # Code to run if the button is white
     if buttonColour == "white":
         litIndicator = input("Is there a lit indicator with label CAR? [Y/N]: ").lower()
         while litIndicator != "y" and litIndicator != "n":
@@ -135,18 +129,15 @@ def OntheSubjectofTheButton():
         buttonLitStrip()
         return
 
-    # Code to run if the button is yellow
     if buttonColour == "yellow":
         buttonLitStrip()
         return
 
-    # Code to run if the button is red and has the text "hold"
     if buttonColour == "red" and buttonText == "hold":
         print(Fore.CYAN)
         print("\n Press and immediately release the button")
         print(Style.RESET_ALL)
 
-    # Code to run if the button is only red
     elif buttonColour == "red":
         # Code block to deal with batteries on the bomb
         if batteryNo > 1 and buttonText == "detonate":
@@ -197,7 +188,6 @@ def OntheSubjectofTheButton():
             buttonLitStrip()
             return
 
-    # Run the continue program function to check if they want to do another module
     from carryon import Continue
 
     Continue()

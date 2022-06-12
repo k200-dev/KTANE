@@ -6,7 +6,6 @@ A program that does the job of the manual reader in the videogame Keep Talking a
 
 ### Built With
 
-* [Python 3](https://www.python.org/)
 * [Colorama](https://github.com/tartley/colorama)
 * [Art](https://github.com/sepandhaghighi/art)
 

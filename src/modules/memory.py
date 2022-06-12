@@ -3,7 +3,6 @@ from colorama import Fore, Style
 
 
 def OntheSubjectofMemory():
-    # Use art module to print ascii text of "Memory"
     print(Fore.BLUE)
     tprint("Memory")
     print(Style.RESET_ALL)

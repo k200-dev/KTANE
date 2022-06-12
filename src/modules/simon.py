@@ -13,7 +13,9 @@ def on_the_subject_of_simon_says():
     strike_num = int(input("Enter the number of strikes [0, 1, 2]: "))
     # Input validation for strikes
     while strike_num > 2 or strike_num < 0:
-        strike_num = int(input("Invalid input, Enter the number of strikes [0, 1, 2]: "))
+        strike_num = int(
+            input("Invalid input, Enter the number of strikes [0, 1, 2]: ")
+        )
 
     if sn_has_vowel == "y":
         if strike_num == 0:

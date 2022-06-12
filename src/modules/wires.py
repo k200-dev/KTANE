@@ -39,9 +39,7 @@ def on_the_subject_of_wires():
         num_of_yellow_wires = int(
             input("Enter the number of yellow wires: [0 = None] ")
         )
-        sn_odd = input(
-            "Is the last digit of the serial number odd? [Y/N] "
-        ).lower()
+        sn_odd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
         last_yellow_wire = input("Is the last wire yellow? [Y/N] ").lower()
 
         if num_of_red_wires > 1 and sn_odd == "y":
@@ -67,9 +65,7 @@ def on_the_subject_of_wires():
 
     if num_of_wires == 5:
         last_black_wire = input("Is the last wire black? [Y/N] ").lower()
-        sn_odd = input(
-            "Is the last digit of the serial number odd? [Y/N] "
-        ).lower()
+        sn_odd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
         num_of_red_wires = int(input("Enter the number of red wires: [0 = None] "))
         num_of_yellow_wires = int(
             input("Enter the number of yellow wires: [0 = None] ")
@@ -97,9 +93,7 @@ def on_the_subject_of_wires():
         num_of_yellow_wires = int(
             input("Enter the number of yellow wires: [0 = None] ")
         )
-        sn_odd = input(
-            "Is the last digit of the serial number odd? [Y/N] "
-        ).lower()
+        sn_odd = input("Is the last digit of the serial number odd? [Y/N] ").lower()
         num_of_yellow_wires = int(
             input("Enter the number of yellow wires: [0 = None] ")
         )

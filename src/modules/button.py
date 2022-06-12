@@ -102,7 +102,9 @@ def on_the_subject_of_the_button():
         return
 
     if button_colour == "white":
-        lit_indicator = input("Is there a lit indicator with label CAR? [Y/N]: ").lower()
+        lit_indicator = input(
+            "Is there a lit indicator with label CAR? [Y/N]: "
+        ).lower()
         while lit_indicator != "y" and lit_indicator != "n":
             lit_indicator = input(
                 "Invalid input, Is there a lit indicator with label CAR? [Y/N]: "

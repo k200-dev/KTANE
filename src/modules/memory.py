@@ -44,7 +44,9 @@ def on_the_subject_of_memory():
         print(Fore.CYAN)
         print("\n Press the button labeled 4. ")
         print(Style.RESET_ALL)
-        stage_two_pos = int(input("Enter the position of the button you just pressed: "))
+        stage_two_pos = int(
+            input("Enter the position of the button you just pressed: ")
+        )
         stage_two_label = 4
     elif stage_two_display_num == 2 or stage_two_display_num == 4:
         print(Fore.CYAN)
@@ -78,7 +80,9 @@ def on_the_subject_of_memory():
         stage_three_label = stage_one_label
     elif stage_three_display_num == 3:
         print("\n Press the button in the third position")
-        stage_three_label = int(input("Enter the label on the button you just pressed: "))
+        stage_three_label = int(
+            input("Enter the label on the button you just pressed: ")
+        )
     elif stage_three_display_num == 4:
         print(Fore.CYAN)
         print("\n Press the button labeled 4. ")
@@ -96,17 +100,23 @@ def on_the_subject_of_memory():
         print(Fore.CYAN)
         print(f"\n Press the button in position {stage_one_pos}. ")
         print(Style.RESET_ALL)
-        stage_four_label = int(input("Enter the label on the button you just pressed: "))
+        stage_four_label = int(
+            input("Enter the label on the button you just pressed: ")
+        )
     elif stage_four_display_num == 2:
         print(Fore.CYAN)
         print("\n Press the button in position 1. ")
         print(Style.RESET_ALL)
-        stage_four_label = int(input("Enter the label on the button you just pressed: "))
+        stage_four_label = int(
+            input("Enter the label on the button you just pressed: ")
+        )
     elif stage_four_display_num == 3 or stage_four_display_num == 4:
         print(Fore.CYAN)
         print(f"\n Press the button in position {stage_two_pos}. ")
         print(Style.RESET_ALL)
-        stage_four_label = int(input("Enter the label on the button you just pressed: "))
+        stage_four_label = int(
+            input("Enter the label on the button you just pressed: ")
+        )
 
     ## STAGE 5 ##
     stage_five_display_num = int(input("Enter the number on the display: "))

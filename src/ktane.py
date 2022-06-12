@@ -19,7 +19,7 @@ carryOn = True
 positiveTotal = 0
 
 # Checks that the user still wants to do more modules
-while carryOn == True:
+while carryOn is True:
     # Print the first list item
     print("[0] Exit")
     # Loop for the all the modules in the module array

@@ -2,136 +2,136 @@ from art import tprint
 from colorama import Fore, Style
 
 
-def OntheSubjectofMemory():
+def on_the_subject_of_memory():
     print(Fore.BLUE)
     tprint("Memory")
     print(Style.RESET_ALL)
 
     ## STAGE 1 ##
-    stage1DisplayNo = int(input("Enter the number on the display: "))
-    while stage1DisplayNo < 1 or stage1DisplayNo > 4:
-        stage1DisplayNo = int(
+    stage_one_display_num = int(input("Enter the number on the display: "))
+    while stage_one_display_num < 1 or stage_one_display_num > 4:
+        stage_one_display_num = int(
             input("Invalid input, Enter the number on the display [1, 2, 3, 4]: ")
         )
 
-    if stage1DisplayNo == 1 or stage1DisplayNo == 2:
+    if stage_one_display_num == 1 or stage_one_display_num == 2:
         print(Fore.CYAN)
         print("\n Press the button in the second position. ")
         print(Style.RESET_ALL)
-        stage1label = int(input("Enter the label on the button you just pressed: "))
-        stage1Pos = 2
-    elif stage1DisplayNo == 3:
+        stage_one_label = int(input("Enter the label on the button you just pressed: "))
+        stage_one_pos = 2
+    elif stage_one_display_num == 3:
         print(Fore.CYAN)
         print("\n Press the button in the third position. ")
         print(Style.RESET_ALL)
-        stage1label = int(input("Enter the label on the button you just pressed: "))
-        stage1Pos = 3
-    elif stage1DisplayNo == 4:
+        stage_one_label = int(input("Enter the label on the button you just pressed: "))
+        stage_one_pos = 3
+    elif stage_one_display_num == 4:
         print(Fore.CYAN)
         print("\n Press the button in the fourth position. ")
         print(Style.RESET_ALL)
-        stage1label = int(input("Enter the label on the button you just pressed: "))
-        stage1Pos = 4
+        stage_one_label = int(input("Enter the label on the button you just pressed: "))
+        stage_one_pos = 4
 
     ## STAGE 2 ##
-    stage2DisplayNo = int(input("Enter the number on the display: "))
-    while stage2DisplayNo < 1 or stage2DisplayNo > 4:
-        stage2DisplayNo = int(
+    stage_two_display_num = int(input("Enter the number on the display: "))
+    while stage_two_display_num < 1 or stage_two_display_num > 4:
+        stage_two_display_num = int(
             input("Invalid input, Enter the number on the display [1, 2, 3, 4]: ")
         )
 
-    if stage2DisplayNo == 1:
+    if stage_two_display_num == 1:
         print(Fore.CYAN)
         print("\n Press the button labeled 4. ")
         print(Style.RESET_ALL)
-        stage2Pos = int(input("Enter the position of the button you just pressed: "))
-        stage2label = 4
-    elif stage2DisplayNo == 2 or stage2DisplayNo == 4:
+        stage_two_pos = int(input("Enter the position of the button you just pressed: "))
+        stage_two_label = 4
+    elif stage_two_display_num == 2 or stage_two_display_num == 4:
         print(Fore.CYAN)
-        print(f"\n Press the button in position {stage1Pos}. ")
+        print(f"\n Press the button in position {stage_one_pos}. ")
         print(Style.RESET_ALL)
-        stage2label = int(input("Enter the label on the button you just pressed: "))
-        stage2Pos = stage1Pos
-    elif stage2DisplayNo == 3:
+        stage_two_label = int(input("Enter the label on the button you just pressed: "))
+        stage_two_pos = stage_one_pos
+    elif stage_two_display_num == 3:
         print(Fore.CYAN)
         print("\n Press the button in position 1. ")
         print(Style.RESET_ALL)
-        stage2label = int(input("Enter the label on the button you just pressed: "))
-        stage2Pos = 1
+        stage_two_label = int(input("Enter the label on the button you just pressed: "))
+        stage_two_pos = 1
 
     ## STAGE 3 ##
-    stage3DisplayNo = int(input("Enter the number on the display: "))
-    while stage3DisplayNo < 1 or stage3DisplayNo > 4:
-        stage3DisplayNo = int(
+    stage_three_display_num = int(input("Enter the number on the display: "))
+    while stage_three_display_num < 1 or stage_three_display_num > 4:
+        stage_three_display_num = int(
             input("Invalid input, Enter the number on the display [1, 2, 3, 4]: ")
         )
 
-    if stage3DisplayNo == 1:
+    if stage_three_display_num == 1:
         print(Fore.CYAN)
-        print(f"\n Press the button labeled {stage2label}. ")
+        print(f"\n Press the button labeled {stage_two_label}. ")
         print(Style.RESET_ALL)
-        stage3label = stage2label
-    elif stage3DisplayNo == 2:
+        stage_three_label = stage_two_label
+    elif stage_three_display_num == 2:
         print(Fore.CYAN)
-        print(f"\n Press the button labeled {stage1label}")
+        print(f"\n Press the button labeled {stage_one_label}")
         print(Style.RESET_ALL)
-        stage3label = stage1label
-    elif stage3DisplayNo == 3:
+        stage_three_label = stage_one_label
+    elif stage_three_display_num == 3:
         print("\n Press the button in the third position")
-        stage3label = int(input("Enter the label on the button you just pressed: "))
-    elif stage3DisplayNo == 4:
+        stage_three_label = int(input("Enter the label on the button you just pressed: "))
+    elif stage_three_display_num == 4:
         print(Fore.CYAN)
         print("\n Press the button labeled 4. ")
         print(Style.RESET_ALL)
-        stage3label = 4
+        stage_three_label = 4
 
     ## STAGE 4 ##
-    stage4DisplayNo = int(input("Enter the number on the display: "))
-    while stage4DisplayNo < 1 or stage4DisplayNo > 4:
-        stage4DisplayNo = int(
+    stage_four_display_num = int(input("Enter the number on the display: "))
+    while stage_four_display_num < 1 or stage_four_display_num > 4:
+        stage_four_display_num = int(
             input("Invalid input, Enter the number on the display [1, 2, 3, 4]: ")
         )
 
-    if stage4DisplayNo == 1:
+    if stage_four_display_num == 1:
         print(Fore.CYAN)
-        print(f"\n Press the button in position {stage1Pos}. ")
+        print(f"\n Press the button in position {stage_one_pos}. ")
         print(Style.RESET_ALL)
-        stage4label = int(input("Enter the label on the button you just pressed: "))
-    elif stage4DisplayNo == 2:
+        stage_four_label = int(input("Enter the label on the button you just pressed: "))
+    elif stage_four_display_num == 2:
         print(Fore.CYAN)
         print("\n Press the button in position 1. ")
         print(Style.RESET_ALL)
-        stage4label = int(input("Enter the label on the button you just pressed: "))
-    elif stage4DisplayNo == 3 or stage4DisplayNo == 4:
+        stage_four_label = int(input("Enter the label on the button you just pressed: "))
+    elif stage_four_display_num == 3 or stage_four_display_num == 4:
         print(Fore.CYAN)
-        print(f"\n Press the button in position {stage2Pos}. ")
+        print(f"\n Press the button in position {stage_two_pos}. ")
         print(Style.RESET_ALL)
-        stage4label = int(input("Enter the label on the button you just pressed: "))
+        stage_four_label = int(input("Enter the label on the button you just pressed: "))
 
     ## STAGE 5 ##
-    stage5DisplayNo = int(input("Enter the number on the display: "))
-    while stage5DisplayNo < 1 or stage5DisplayNo > 4:
-        stage5DisplayNo = int(
+    stage_five_display_num = int(input("Enter the number on the display: "))
+    while stage_five_display_num < 1 or stage_five_display_num > 4:
+        stage_five_display_num = int(
             input("\n Invalid input, Enter the number on the display [1, 2, 3, 4]: ")
         )
 
-    if stage5DisplayNo == 1:
+    if stage_five_display_num == 1:
         print(Fore.CYAN)
-        print(f"\n Press the button labeled {stage1label}. ")
+        print(f"\n Press the button labeled {stage_one_label}. ")
         print(Style.RESET_ALL)
-    elif stage5DisplayNo == 2:
+    elif stage_five_display_num == 2:
         print(Fore.CYAN)
-        print(f"\n Press the button labeles {stage2label}")
+        print(f"\n Press the button labeles {stage_two_label}")
         print(Style.RESET_ALL)
-    elif stage5DisplayNo == 3:
+    elif stage_five_display_num == 3:
         print(Fore.CYAN)
-        print(f"Press the button labeles {stage4label}")
+        print(f"Press the button labeles {stage_four_label}")
         print(Style.RESET_ALL)
-    elif stage5DisplayNo == 4:
+    elif stage_five_display_num == 4:
         print(Fore.CYAN)
-        print(f"Press the button labeled {stage3label}")
+        print(f"Press the button labeled {stage_three_label}")
         print(Style.RESET_ALL)
 
-    from carryon import Continue
+    from main import continue_program
 
-    Continue()
+    continue_program()

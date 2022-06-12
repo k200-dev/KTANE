@@ -2,27 +2,27 @@ from art import tprint
 from colorama import Fore, Style
 
 
-def OntheSubjectofTheButton():
+def on_the_subject_of_the_button():
 
-    # Helper function for onTheSubjectOfButtons
-    def buttonLitStrip():
+    # Helper function for on_the_subject_of_the_button
+    def button_lit_strip():
         print(
             "Hold the button down and observe the lit coloured strip on the right of the button"
         )
-        litStrip = input("Enter the colour of the strip: ").lower()
-        if litStrip == "blue":
+        lit_strip = input("Enter the colour of the strip: ").lower()
+        if lit_strip == "blue":
             print(Fore.CYAN)
             print(
                 "\n Release the button when the countdown timer has a 4 in any position"
             )
             print(Style.RESET_ALL)
-        elif litStrip == "white":
+        elif lit_strip == "white":
             print(Fore.CYAN)
             print(
                 "\n Release the button when the countdown timer has a 1 in any position"
             )
             print(Style.RESET_ALL)
-        elif litStrip == "yellow":
+        elif lit_strip == "yellow":
             print(Fore.CYAN)
             print(
                 "\n Release the button when the countdown timer has a 5 in any position"
@@ -39,155 +39,157 @@ def OntheSubjectofTheButton():
     tprint("Button")
     print(Style.RESET_ALL)
 
-    buttonText = ""
-    buttonColour = ""
-    buttonHasText = ""
-    bombHasBatteries = ""
-    batteryNo = 0
+    button_text = ""
+    button_colour = ""
+    button_has_text = ""
+    bomb_has_batteries = ""
+    battery_num = 0
 
-    buttonColour = input("Enter the colour of the button: ").lower()
+    button_colour = input("Enter the colour of the button: ").lower()
     while (
-        buttonColour != "blue"
-        and buttonColour != "red"
-        and buttonColour != "white"
-        and buttonColour != "yellow"
-        and buttonColour != "black"
+        button_colour != "blue"
+        and button_colour != "red"
+        and button_colour != "white"
+        and button_colour != "yellow"
+        and button_colour != "black"
     ):
-        buttonColour = input("Invalid input, Enter the colour of the button: ").lower()
-    buttonHasText = input("Does the button have text on it? [Y/N]: ").lower()
-    while buttonHasText != "y" and buttonHasText != "n" and buttonHasText != "":
-        buttonHasText = input(
+        button_colour = input("Invalid input, Enter the colour of the button: ").lower()
+    button_has_text = input("Does the button have text on it? [Y/N]: ").lower()
+    while button_has_text != "y" and button_has_text != "n" and button_has_text != "":
+        button_has_text = input(
             "Invalid input, Does the button have text on it? [Y/N]: "
         ).lower()
-    if buttonHasText == "y":
-        buttonText = input("Enter the text on the button: ").lower()
+    if button_has_text == "y":
+        button_text = input("Enter the text on the button: ").lower()
         while (
-            buttonText != "abort"
-            and buttonText != "detonate"
-            and buttonText != "hold"
-            and buttonText != "press"
+            button_text != "abort"
+            and button_text != "detonate"
+            and button_text != "hold"
+            and button_text != "press"
         ):
-            buttonText = input("Invalid input, Enter the text on the button: ").lower()
-    bombHasBatteries = input("Does the bomb have batteries on it? [Y/N]: ").lower()
+            button_text = input("Invalid input, Enter the text on the button: ").lower()
+    bomb_has_batteries = input("Does the bomb have batteries on it? [Y/N]: ").lower()
     while (
-        bombHasBatteries != "y" and bombHasBatteries != "n" and bombHasBatteries != ""
+        bomb_has_batteries != "y"
+        and bomb_has_batteries != "n"
+        and bomb_has_batteries != ""
     ):
-        bombHasBatteries = input(
+        bomb_has_batteries = input(
             "Invalid input, Does the button have text on it? [Y/N]: "
         ).lower()
-    if bombHasBatteries == "y":
-        batteryNo = int(input("Enter the number of batteries on the bomb: "))
+    if bomb_has_batteries == "y":
+        battery_num = int(input("Enter the number of batteries on the bomb: "))
 
-    if buttonColour == "blue":
-        if buttonText == "abort" and buttonColour == "blue":
-            buttonLitStrip()
+    if button_colour == "blue":
+        if button_text == "abort" and button_colour == "blue":
+            button_lit_strip()
             return
-        elif batteryNo > 1 and buttonText == "detonate":
+        elif battery_num > 1 and button_text == "detonate":
             print(Fore.CYAN)
             print("\n Press and immediately release the button")
             print(Style.RESET_ALL)
             return
-        elif batteryNo > 2:
-            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
-            if litIndicator == "y":
+        elif battery_num > 2:
+            lit_indicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            if lit_indicator == "y":
                 print(Fore.CYAN)
                 print("\n Press and immediately release the button")
                 print(Style.RESET_ALL)
                 return
             else:
                 pass
-        buttonLitStrip()
+        button_lit_strip()
         return
 
-    if buttonColour == "white":
-        litIndicator = input("Is there a lit indicator with label CAR? [Y/N]: ").lower()
-        while litIndicator != "y" and litIndicator != "n":
-            litIndicator = input(
+    if button_colour == "white":
+        lit_indicator = input("Is there a lit indicator with label CAR? [Y/N]: ").lower()
+        while lit_indicator != "y" and lit_indicator != "n":
+            lit_indicator = input(
                 "Invalid input, Is there a lit indicator with label CAR? [Y/N]: "
             ).lower()
-        if litIndicator == "y":
-            buttonLitStrip()
+        if lit_indicator == "y":
+            button_lit_strip()
         # Code block to deal with batteries on the bomb
-        elif batteryNo > 1 and buttonText == "detonate":
+        elif battery_num > 1 and button_text == "detonate":
             print(Fore.CYAN)
             print("\n Press and immediately release the button")
             print(Style.RESET_ALL)
             return
-        elif batteryNo > 2:
-            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
-            while litIndicator != "y" and litIndicator != "n":
-                litIndicator = input(
+        elif battery_num > 2:
+            lit_indicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            while lit_indicator != "y" and lit_indicator != "n":
+                lit_indicator = input(
                     "Invalid input, Is there a lit indicator with label FRK? [Y/N]: "
                 ).lower()
-            if litIndicator == "y":
+            if lit_indicator == "y":
                 print(Fore.CYAN)
                 print("\n Press and immediately release the button")
                 print(Style.RESET_ALL)
                 return
             else:
                 pass
-        buttonLitStrip()
+        button_lit_strip()
         return
 
-    if buttonColour == "yellow":
-        buttonLitStrip()
+    if button_colour == "yellow":
+        button_lit_strip()
         return
 
-    if buttonColour == "red" and buttonText == "hold":
+    if button_colour == "red" and button_text == "hold":
         print(Fore.CYAN)
         print("\n Press and immediately release the button")
         print(Style.RESET_ALL)
 
-    elif buttonColour == "red":
+    elif button_colour == "red":
         # Code block to deal with batteries on the bomb
-        if batteryNo > 1 and buttonText == "detonate":
+        if battery_num > 1 and button_text == "detonate":
             print(Fore.CYAN)
             print("\n Press and immediately release the button")
             print(Style.RESET_ALL)
             return
-        elif batteryNo > 2:
-            litIndicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
-            while litIndicator != "y" and litIndicator != "n":
-                litIndicator = input(
+        elif battery_num > 2:
+            lit_indicator = input("Is there a lit indicator with label FRK? [Y/N]: ")
+            while lit_indicator != "y" and lit_indicator != "n":
+                lit_indicator = input(
                     "Invalid input, Is there a lit indicator with label FRK? [Y/N]: "
                 ).lower()
-            if litIndicator == "y":
+            if lit_indicator == "y":
                 print(Fore.CYAN)
                 print("\n Press and immediately release the button")
                 print(Style.RESET_ALL)
                 return
             else:
                 pass
-        buttonLitStrip()
+        button_lit_strip()
         return
 
     # Catch all statement for batteries
     if (
-        buttonColour == "blue"
-        or buttonColour == "white"
-        or buttonColour == "yellow"
-        or buttonColour == "red"
+        button_colour == "blue"
+        or button_colour == "white"
+        or button_colour == "yellow"
+        or button_colour == "red"
     ):
-        if bombHasBatteries == "y" and batteryNo > 1 and buttonText == "detonate":
+        if bomb_has_batteries == "y" and battery_num > 1 and button_text == "detonate":
             print(Fore.CYAN)
             print("Press and immediately release the button")
             print(Style.RESET_ALL)
             return
-        elif bombHasBatteries == "y" and batteryNo > 2:
-            litIndicator = input(
+        elif bomb_has_batteries == "y" and battery_num > 2:
+            lit_indicator = input(
                 "Is there a lit indicator with label FRK? [Y/N]: "
             ).lower()
-            while litIndicator != "y" and litIndicator != "n":
-                litIndicator = input(
+            while lit_indicator != "y" and lit_indicator != "n":
+                lit_indicator = input(
                     "Invalid input, Is there a lit indicator with label FRK? [Y/N]: "
                 ).lower()
-            if litIndicator == "y":
-                buttonLitStrip()
+            if lit_indicator == "y":
+                button_lit_strip()
                 return
         else:
-            buttonLitStrip()
+            button_lit_strip()
             return
 
-    from carryon import Continue
+    from main import continue_program
 
-    Continue()
+    continue_program()

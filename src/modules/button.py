@@ -191,4 +191,3 @@ def on_the_subject_of_the_button():
         else:
             button_lit_strip()
             return
-

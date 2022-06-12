@@ -116,4 +116,3 @@ def on_the_subject_of_wires():
             print(Fore.CYAN)
             print("\n Cut the fourth wire.")
             print(Style.RESET_ALL)
-

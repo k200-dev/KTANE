@@ -1,25 +1,18 @@
 from colorama import Fore, Style
+from art import tprint
+from os import system, name
 from modules.wires import on_the_subject_of_wires
 from modules.button import on_the_subject_of_the_button
 from modules.simon import on_the_subject_of_simon_says
 from modules.memory import on_the_subject_of_memory
 
 
-def continue_program():
-    print(Fore.GREEN)
-    carry_on_input = input("\n[+] Do you want to do another module? [Y/N]: ").lower()
-    print(Style.RESET_ALL)
-    if carry_on_input == "y":
-        menu(True)
-    else:
-        quit()
-
-
-def menu(carry_on):
+def menu():
     total = 1
     modules = ["Wires", "Button", "Simon Says", "Memory"]
 
-    while carry_on is True:
+    while True:
+        tprint("KTANE")
         print("[0] Exit")
         for x in modules:
             # Print the name and respective number of the module in the menu
@@ -44,4 +37,4 @@ def menu(carry_on):
 
 
 if __name__ == "__main__":
-    menu(True)
+    menu()

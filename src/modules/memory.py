@@ -141,7 +141,3 @@ def on_the_subject_of_memory():
         print(Fore.CYAN)
         print(f"Press the button labeled {stage_three_label}")
         print(Style.RESET_ALL)
-
-    from main import continue_program
-
-    continue_program()

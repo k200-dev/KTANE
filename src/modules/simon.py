@@ -228,7 +228,3 @@ def on_the_subject_of_simon_says():
                 print(Fore.CYAN)
                 print("\n Press the colours in this order:", *input_list, sep=" ")
                 print(Style.RESET_ALL)
-
-    from main import continue_program
-
-    continue_program()

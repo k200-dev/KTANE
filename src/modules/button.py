@@ -192,6 +192,3 @@ def on_the_subject_of_the_button():
             button_lit_strip()
             return
 
-    from main import continue_program
-
-    continue_program()

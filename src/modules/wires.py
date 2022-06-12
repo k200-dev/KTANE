@@ -117,6 +117,3 @@ def on_the_subject_of_wires():
             print("\n Cut the fourth wire.")
             print(Style.RESET_ALL)
 
-    from main import continue_program
-
-    continue_program()

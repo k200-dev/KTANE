@@ -7,19 +7,19 @@ from modules.memory import on_the_subject_of_memory
 
 def continue_program():
     print(Fore.GREEN)
-    carryOnInput = input("\n[+] Do you want to do another module? [Y/N]: ").lower()
+    carry_on_input = input("\n[+] Do you want to do another module? [Y/N]: ").lower()
     print(Style.RESET_ALL)
-    if carryOnInput == "y":
+    if carry_on_input == "y":
         menu(True)
     else:
         quit()
 
 
-def menu(carryOn):
+def menu(carry_on):
     total = 1
     modules = ["Wires", "Button", "Simon Says", "Memory"]
 
-    while carryOn is True:
+    while carry_on is True:
         print("[0] Exit")
         for x in modules:
             # Print the name and respective number of the module in the menu
@@ -28,18 +28,18 @@ def menu(carryOn):
 
         total = 1
         print(Fore.GREEN)
-        moduleInput = int(input("\n[+] Select a module: "))
+        module_input = int(input("\n[+] Select a module: "))
         print(Style.RESET_ALL)
 
-        if moduleInput == 0:
+        if module_input == 0:
             quit()
-        elif moduleInput == 1:
+        elif module_input == 1:
             on_the_subject_of_wires()
-        elif moduleInput == 2:
+        elif module_input == 2:
             on_the_subject_of_the_button()
-        elif moduleInput == 3:
+        elif module_input == 3:
             on_the_subject_of_simon_says()
-        elif moduleInput == 4:
+        elif module_input == 4:
             on_the_subject_of_memory()
 
 
